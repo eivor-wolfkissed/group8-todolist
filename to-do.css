@@ -1,0 +1,232 @@
+:root {
+    --background: #B278CE;
+    --red: #E25A5A;
+    --light-red: #ED6D9B;
+    --dark-red: #ED6D9B;
+    --icon-green: #8ABC7E;
+    --green: #5CB7A7;
+    --greener: #799C70;
+    --greenest: #5FAD4C;
+    --yellow: #DED36A;
+    --purple: #A46ADE;
+}  
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Meera Inimai', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--red);
+    align-self: center;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background);
+    padding: 30px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 100vw;
+    background: var(--red);
+    margin: auto;
+    border-radius: 20px;
+    border: solid 4px;
+    box-shadow: 20px 20px;
+    padding-bottom: 40px;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin-left: 40px;
+}
+
+header h1 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    background-color: yellow;
+    padding: 1rem;
+    border-radius: 13px;
+    margin-right: 1rem;
+    font-size: 1rem;
+    border: solid black 3px;
+}
+
+#Add {
+    background-color: #5FAD4C;
+    font-size: 1rem;
+    border-radius: 13px;
+    padding: 1rem;
+    max-width: 300px;
+    border: solid black 3px;
+    cursor: pointer;
+}
+
+#Add:hover {
+    animation: forwards;
+}
+#Add:active {
+    opacity: 0.6;
+}
+
+hr {
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 0px 50px; 
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    margin-left: 45px;
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 13px;
+    border: solid black;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+}
+
+#button {
+    float: right;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+ul li .task-text {
+    flex-grow: 1;
+}
+
+ul li .action-buttons button {
+    cursor: pointer;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+ul li .action-buttons #complete {
+    background-color: var(--greenest);
+}
+
+ul li .action-buttons #delete {
+    background-color: var(--red);
+}
+
+
+/* Downward arrow button */
+#arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Subtask list styling */
+.subtask-list {
+    margin-left: 30px;
+    padding-left: 10px;
+    list-style-type: square;
+}
+
+ul li .subtask-list {
+    margin-left: 30px;
+    list-style-type: none; 
+}
+
+.subtask-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--greener);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    width: 12rem;
+    border: solid black;
+}
+
+/* Task buttons and styling for completed tasks */
+#complete {
+    background-color: var(--greenest);
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 7px 7px;
+    cursor: pointer;
+    width: 40px;
+}
+
+#delete {
+    background-color: var(--red);
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 7px 7px;
+    cursor: pointer;
+    width: 40px;
+}
+
+ul li .action-buttons, .subtask-list .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: cornflowerblue;
+    margin-left: 50px;
+    font-size: 1rem;
+    border-radius: 13px;
+    padding: 1rem;
+    max-width: 300px;
+    border: solid black 3px;
+    cursor: pointer;
+}
+
+.addsubtask-button{
+    margin-left: 90px;
+    border: black solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    height: 2.5rem;
+}
